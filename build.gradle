@@ -14,6 +14,13 @@ java {
     }
 }
 
+
+dependencyManagement {
+    dependencies {
+        dependency 'org.apache.commons:commons-lang3:3.18.0'
+    }
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -26,7 +33,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web' // Виправлено з webmvc
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
@@ -49,7 +56,6 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
     testImplementation 'org.testcontainers:junit-jupiter'
     testImplementation 'org.testcontainers:postgresql'
-
     testImplementation 'org.testcontainers:jdbc'
 }
 
@@ -58,7 +64,3 @@ tasks.named('test') {
     jvmArgs("-XX:+EnableDynamicAgentLoading")
 }
 
-tasks.withType(Test).configureEach {
-    environment "DOCKER_HOST", "tcp://127.0.0.1:2375"
-    environment "TESTCONTAINERS_RYUK_DISABLED", "true"
-}
