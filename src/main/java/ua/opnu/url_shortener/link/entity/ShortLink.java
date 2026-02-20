@@ -1,8 +1,8 @@
-package ua.opnu.url_shortener.link;
+package ua.opnu.url_shortener.link.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import ua.opnu.url_shortener.auth.User;
+import ua.opnu.url_shortener.auth.entity.User;
 import java.time.LocalDateTime;
 
 @Entity

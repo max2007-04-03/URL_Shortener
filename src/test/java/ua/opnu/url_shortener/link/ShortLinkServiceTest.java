@@ -6,7 +6,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.access.AccessDeniedException;
-import ua.opnu.url_shortener.auth.User;
+import ua.opnu.url_shortener.auth.entity.User;
+import ua.opnu.url_shortener.link.entity.LinkClick;
+import ua.opnu.url_shortener.link.entity.ShortLink;
+import ua.opnu.url_shortener.link.exception.LinkExpiredException;
+import ua.opnu.url_shortener.link.repository.LinkClickRepository;
+import ua.opnu.url_shortener.link.repository.ShortLinkRepository;
+import ua.opnu.url_shortener.link.service.ShortLinkService;
 
 import java.time.LocalDateTime;
 import java.util.List;

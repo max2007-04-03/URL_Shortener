@@ -1,4 +1,4 @@
-package ua.opnu.url_shortener.auth;
+package ua.opnu.url_shortener.auth.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

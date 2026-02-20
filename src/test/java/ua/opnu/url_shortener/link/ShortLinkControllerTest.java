@@ -7,11 +7,14 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import ua.opnu.url_shortener.auth.JwtAuthenticationFilter;
-import ua.opnu.url_shortener.auth.JwtService;
-import ua.opnu.url_shortener.auth.SecurityConfig;
-import ua.opnu.url_shortener.auth.User;
-import ua.opnu.url_shortener.auth.UserRepository;
+import ua.opnu.url_shortener.auth.config.JwtAuthenticationFilter;
+import ua.opnu.url_shortener.auth.service.JwtService;
+import ua.opnu.url_shortener.auth.config.SecurityConfig;
+import ua.opnu.url_shortener.auth.entity.User;
+import ua.opnu.url_shortener.auth.repository.UserRepository;
+import ua.opnu.url_shortener.link.controller.ShortLinkController;
+import ua.opnu.url_shortener.link.entity.ShortLink;
+import ua.opnu.url_shortener.link.service.ShortLinkService;
 
 import java.time.LocalDateTime;
 

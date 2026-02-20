@@ -1,4 +1,4 @@
-package ua.opnu.url_shortener.link;
+package ua.opnu.url_shortener.link.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

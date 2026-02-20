@@ -1,4 +1,4 @@
-package ua.opnu.url_shortener.auth;
+package ua.opnu.url_shortener.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

@@ -1,10 +1,13 @@
-package ua.opnu.url_shortener.auth;
+package ua.opnu.url_shortener.auth.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ua.opnu.url_shortener.auth.service.AuthService;
+import ua.opnu.url_shortener.auth.dto.LoginRequest;
+import ua.opnu.url_shortener.auth.dto.RegisterRequest;
 
 @RestController
 @RequestMapping("/v1/auth")

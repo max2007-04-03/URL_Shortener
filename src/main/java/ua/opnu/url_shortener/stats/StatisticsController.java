@@ -8,9 +8,9 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ua.opnu.url_shortener.auth.User; // 1. Твій імпорт (перевір точний шлях до класу User)
-import ua.opnu.url_shortener.link.ShortLink;
-import ua.opnu.url_shortener.link.ShortLinkService;
+import ua.opnu.url_shortener.auth.entity.User; // 1. Твій імпорт (перевір точний шлях до класу User)
+import ua.opnu.url_shortener.link.entity.ShortLink;
+import ua.opnu.url_shortener.link.service.ShortLinkService;
 
 import java.util.List;
 

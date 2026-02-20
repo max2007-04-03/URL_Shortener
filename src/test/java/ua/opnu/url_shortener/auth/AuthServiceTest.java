@@ -6,6 +6,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import ua.opnu.url_shortener.auth.dto.LoginRequest;
+import ua.opnu.url_shortener.auth.dto.RegisterRequest;
+import ua.opnu.url_shortener.auth.entity.User;
+import ua.opnu.url_shortener.auth.exception.UserAlreadyExistsException;
+import ua.opnu.url_shortener.auth.repository.UserRepository;
+import ua.opnu.url_shortener.auth.service.AuthService;
+import ua.opnu.url_shortener.auth.service.JwtService;
 
 import java.util.Optional;
 

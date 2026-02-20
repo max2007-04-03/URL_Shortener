@@ -1,10 +1,15 @@
-package ua.opnu.url_shortener.auth;
+package ua.opnu.url_shortener.auth.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import ua.opnu.url_shortener.auth.dto.LoginRequest;
+import ua.opnu.url_shortener.auth.dto.RegisterRequest;
+import ua.opnu.url_shortener.auth.entity.User;
+import ua.opnu.url_shortener.auth.exception.UserAlreadyExistsException;
+import ua.opnu.url_shortener.auth.repository.UserRepository;
 
 @Service
 @RequiredArgsConstructor

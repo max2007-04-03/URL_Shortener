@@ -1,1 +1,0 @@
-ALTER TABLE link_clicks ADD COLUMN IF NOT EXISTS ip_address VARCHAR(45);

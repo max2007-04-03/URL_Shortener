@@ -1,4 +1,4 @@
-package ua.opnu.url_shortener.auth;
+package ua.opnu.url_shortener.auth.service;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
