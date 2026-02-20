@@ -21,7 +21,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ShortLinkService {
 
-    // КОНСТАНТА для усунення дублювання
     private static final String LINK_NOT_FOUND_MSG = "Посилання не знайдено";
 
     private final ShortLinkRepository repository;

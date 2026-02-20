@@ -75,6 +75,6 @@ class StatisticsControllerTest {
     @Test
     void getStats_ShouldReturnForbidden_WhenNotAuthenticated() throws Exception {
         mockMvc.perform(get("/v1/stats/today"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isForbidden());
     }
 }
