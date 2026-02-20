@@ -3,11 +3,15 @@ package ua.opnu.url_shortener.stats;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import ua.opnu.url_shortener.auth.service.JwtService;
 import ua.opnu.url_shortener.auth.entity.User;
+import ua.opnu.url_shortener.auth.repository.UserRepository;
+import ua.opnu.url_shortener.auth.config.JwtAuthenticationFilter; // Додано
+import ua.opnu.url_shortener.auth.config.SecurityConfig;
 import ua.opnu.url_shortener.link.entity.ShortLink;
 import ua.opnu.url_shortener.link.service.ShortLinkService;
 
@@ -19,6 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(StatisticsController.class)
+@Import({SecurityConfig.class, JwtAuthenticationFilter.class})
 class StatisticsControllerTest {
 
     @Autowired
@@ -29,6 +34,9 @@ class StatisticsControllerTest {
 
     @MockitoBean
     private JwtService jwtService;
+
+    @MockitoBean
+    private UserRepository userRepository;
 
     @Test
     void getTodayStats_ShouldReturnCountAndMessage() throws Exception {
